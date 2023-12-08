@@ -46,7 +46,11 @@ dependencies {
 }
 
 tasks.named('test') {
+    jvmArgs '-Duser.timezone=UTC'
     useJUnitPlatform()
+    testLogging {
+        events "PASSED", "SKIPPED", "FAILED"
+    }
 }
 
 spotless {
