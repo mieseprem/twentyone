@@ -14,12 +14,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class TwentyOneApplication {
     public static final long COMMON_WEB_TIMEOUT_IN_SECONDS = 10;
-    public static final ThreadFactory THREAD_FACTORY =
+    static final ThreadFactory THREAD_FACTORY =
             Thread.ofVirtual().name("virt-", 0L).factory();
 
     final TwentyOneService twentyOneService;
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         var applicationContext = SpringApplication.run(TwentyOneApplication.class, args);
 
         var twentyOneRunner = applicationContext.getBean(TwentyOneApplication.class);

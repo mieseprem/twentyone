@@ -11,7 +11,6 @@ import de.kaasy.twentyone.value.YesNoCatFact;
 import de.kaasy.twentyone.web.CatFactsClient;
 import de.kaasy.twentyone.web.HttpBinClient;
 import de.kaasy.twentyone.web.YesNoClient;
-import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -100,8 +99,6 @@ class TwentyOneServiceTest {
             // when + then
             assertThatExceptionOfType(RuntimeException.class)
                     .isThrownBy(() -> twentyOneService.getData(1))
-                    .withCauseInstanceOf(ExecutionException.class)
-                    .havingCause()
                     .withCauseInstanceOf(IllegalArgumentException.class);
         }
 
@@ -122,8 +119,6 @@ class TwentyOneServiceTest {
             // when + then
             assertThatExceptionOfType(RuntimeException.class)
                     .isThrownBy(() -> twentyOneService.getData(1))
-                    .withCauseInstanceOf(ExecutionException.class)
-                    .havingCause()
                     .withCauseInstanceOf(IllegalArgumentException.class);
         }
     }
