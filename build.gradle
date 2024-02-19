@@ -8,7 +8,7 @@ plugins {
     id "com.diffplug.spotless" version "6.23.3"
 
     // Lombok is used to reduce boilerplate code
-    id "io.freefair.lombok" version "8.4"
+    id "io.freefair.lombok" version "8.6"
 
     // Plugin that provides Maven-like dependency management and exclusions
     id 'io.spring.dependency-management' version '1.1.4'
